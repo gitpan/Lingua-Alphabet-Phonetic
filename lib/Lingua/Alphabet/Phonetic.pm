@@ -1,5 +1,5 @@
 
-# $Id: Phonetic.pm,v 1.2 2004/01/10 14:12:19 Daddy Exp $
+# $Id: Phonetic.pm,v 1.3 2004/02/06 22:26:57 Daddy Exp $
 
 =head1 NAME
 
@@ -69,7 +69,7 @@ package Lingua::Alphabet::Phonetic;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = sprintf("%d.%02d", q$Revision: 1.2 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.3 $ =~ /(\d+)\.(\d+)/o);
 
 sub new
   {
@@ -87,7 +87,7 @@ sub new
 sub enunciate
   {
   my $self = shift;
-  my $s = shift;
+  my $s = shift || '';
   my @ac = split('', $s);
   return map { $self->_name_of_letter($_) } @ac;
   } # enunciate

@@ -1,3 +1,16 @@
+2004-02-10  Kingpin  <mthurn@verizon.net>
+
+	* t/pod.t: new file
+
+2004-02-06  Kingpin  <mthurn@verizon.net>
+
+	* Code/phonetize-code.PL: check for undef arg
+	* lib/Lingua/Alphabet/Phonetic.pm (enunciate): check for undef arg on enunciate()
+
+2004-01-26  Kingpin  <mthurn@verizon.net>
+
+	* Code/phonetize-code.PL: new file
+
 2004-01-10  Kingpin  <mthurn@verizon.net>
 
 	* lib/Lingua/Alphabet/Phonetic.pm: FIRST RELEASE
