@@ -2,7 +2,7 @@
 use inc::Module::Install;
 
 name('Lingua-Alphabet-Phonetic');
-version(0.03);
+version(0.04);
 
 author('Martin Thurn <mthurn@cpan.org>');
 license('perl');
@@ -18,6 +18,7 @@ build_requires('File::Basename');
 # Test::More is only needed for `make test`:
 include_deps('Test::More', 5.004);
 build_requires('Test::More');
+build_requires('Test::Pod');
 # I think there's a bug in Module::CoreList or something, because this
 # comes up missing on some platforms:
 include_deps('Test::Simple', 5.004);

@@ -2,7 +2,7 @@ use Config;
 use File::Basename qw(basename dirname);
 chdir(dirname($0));
 ($file = basename($0)) =~ s/\.PL$//i;
-$codefile = "Code/$file-code.pl";
+$codefile = "Code/$file-code.PL";
 open IN, "<$codefile" or die "Can't read $codefile: $!";
 open OUT,">$file" or die "Can't create $file: $!";
 chmod(0755, $file);
