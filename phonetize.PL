@@ -18,8 +18,10 @@ $Config{'startperl'} -w
 $/ = "\n";
 my @as = <IN>;
 close IN;
-# Delete 'exit 0' off top of AutoSearch-code.pl:
+# Delete 'exit 0' off top of $file-code.pl:
 shift @as;
 $" = "\n";
 print OUT @as;
 close OUT;
+__END__
+

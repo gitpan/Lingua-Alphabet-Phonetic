@@ -1,6 +1,7 @@
 exit 0;
 # The above line will be stripped off during `make`
 #
+#line 4
 
 =head1 NAME
 
@@ -46,14 +47,18 @@ use strict;
 use warnings;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 1.2 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.4 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 my $s = shift() || '';
-$s =~ s!(.)(.)(.)!$1 $2 $3\n!g;
+# Insert spaces between every letter:
+$s = join(' ', split('', $s));
+# Insert {CR} after every third letter:
+$s =~ s!(. . .) !$1\n!g;
 my $oMilSpeaker = new Lingua::Alphabet::Phonetic('NATO');
 my @asMilSpeak = $oMilSpeaker->enunciate($s);
 $, = '';
-print @asMilSpeak;
+print @asMilSpeak, "\n";
 exit 0;
 
 __END__
+

@@ -9,17 +9,18 @@ At present, that is the only alphabet available for conversion.
 
 INSTALLATION
 
-To install this module type the following:
+To install this module run the following:
 
    perl Makefile.PL
-   make test
    make install
 
 
 COPYRIGHT AND LICENSE
 
-Copyright (C) 2004 Martin Thurn
+Copyright (C) 2004-2006 Martin Thurn
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
+
+For more information about my Perl Modules, visit http://tinyurl.com/nn67z
 
