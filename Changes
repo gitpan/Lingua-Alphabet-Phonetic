@@ -1,3 +1,11 @@
+2006-10-06    <Daddy@C-3PO>
+
+	* Makefile.PL: typo
+
+2006-10-01    <Daddy@C-3PO>
+
+	* Code/phonetize-code.PL: FIX spacing between words in certain cases
+
 2004-02-10  Kingpin  <mthurn@verizon.net>
 
 	* t/pod.t: new file

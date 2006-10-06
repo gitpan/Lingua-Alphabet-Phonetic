@@ -2,7 +2,7 @@
 use inc::Module::Install;
 
 name('Lingua-Alphabet-Phonetic');
-version(0.051);
+version(0.052);
 
 author('Martin Thurn <mthurn@cpan.org>');
 license('perl');
@@ -28,7 +28,7 @@ check_nmake();      # check and download nmake.exe for Win32
 sub MY::postamble
   {
   my $ret = <<'PART0';
-phonetize :: code/phonetize-code.PL
+phonetize :: Code/phonetize-code.PL
 	$(FULLPERL) phonetize.PL
 	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
 
