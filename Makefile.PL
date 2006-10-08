@@ -2,7 +2,7 @@
 use inc::Module::Install;
 
 name('Lingua-Alphabet-Phonetic');
-version(0.052);
+version(0.053);
 
 author('Martin Thurn <mthurn@cpan.org>');
 license('perl');
