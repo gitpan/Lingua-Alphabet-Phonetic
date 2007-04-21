@@ -1,5 +1,5 @@
 
-# $Id: Phonetic.pm,v 1.5 2006/10/08 00:33:24 Daddy Exp $
+# $Id: Phonetic.pm,v 1.6 2007/04/21 14:30:55 Daddy Exp $
 
 =head1 NAME
 
@@ -21,6 +21,10 @@ included with this distribution.
 =head1 METHODS
 
 =over
+
+=item new
+
+Create an object of this class.  See SYNOPSIS above.
 
 =item enunciate
 
@@ -71,7 +75,7 @@ package Lingua::Alphabet::Phonetic;
 use strict;
 
 use vars qw( $VERSION );
-$VERSION = sprintf("%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.6 $ =~ /(\d+)\.(\d+)/o);
 
 sub new
   {

@@ -1,3 +1,7 @@
+2007-04-21    <Daddy@C-3PO>
+
+	* lib/Lingua/Alphabet/Phonetic.pm: add pod for new()
+
 2006-10-07    <Daddy@C-3PO>
 
 	* lib/Lingua/Alphabet/Phonetic/NATO.pm: updated the "See Also" section

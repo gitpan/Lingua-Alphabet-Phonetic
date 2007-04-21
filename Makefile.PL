@@ -1,8 +1,10 @@
 
+# $Id: Makefile.PL,v 1.8 2007/04/21 14:28:17 Daddy Exp $
+
 use inc::Module::Install;
 
 name('Lingua-Alphabet-Phonetic');
-version(0.053);
+version(0.054);
 
 author('Martin Thurn <mthurn@cpan.org>');
 license('perl');
@@ -22,8 +24,7 @@ build_requires('Test::Pod');
 # comes up missing on some platforms:
 build_requires('Test::Simple');
 
-check_nmake();      # check and download nmake.exe for Win32
-&Makefile->write;
+&WriteAll;
 
 sub MY::postamble
   {
@@ -36,4 +37,3 @@ PART0
     } # if
 
 __END__
-
