@@ -1,5 +1,5 @@
 
-# $Id: NATO.pm,v 1.4 2006/10/08 00:32:34 Daddy Exp $
+# $Id: NATO.pm,v 1.5 2007/06/04 01:04:40 Daddy Exp $
 
 =head1 NAME
 
@@ -31,12 +31,11 @@ Martin Thurn (mthurn@cpan.org).
 
 package Lingua::Alphabet::Phonetic::NATO;
 
-use Exporter;
-
 use strict;
-use vars qw( $VERSION @ISA );
-@ISA = qw( Lingua::Alphabet::Phonetic );
-$VERSION = sprintf("%d.%02d", q$Revision: 1.4 $ =~ /(\d+)\.(\d+)/o);
+
+use base 'Lingua::Alphabet::Phonetic';
+our
+$VERSION = sprintf("%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/o);
 
 my @asAlphabet = qw(
 Alpha Bravo Charlie Delta Echo Foxtrot Golf Hotel India Juliet Kilo Lima

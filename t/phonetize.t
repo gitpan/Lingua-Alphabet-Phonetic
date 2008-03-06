@@ -10,12 +10,12 @@ use strict;
 my $sProg = catfile('blib', 'script', 'phonetize');
 my $iWIN32 = ($^O =~ m!win32!i);
 
-ok(-s $sProg, "$sProg does not exist");
-ok(-f $sProg, "$sProg is not a plain file");
+ok(-s $sProg, "$sProg exists");
+ok(-f $sProg, "$sProg is a plain file");
 SKIP:
   {
   skip 'Can not check "executable" file flag on Win32', 1 if $iWIN32;
-  ok(-x $sProg, "$sProg is not executable");
+  ok(-x $sProg, "$sProg is executable");
   } # end of SKIP block
 # Now actually try running it:
 my $sExpect = <<EXPECT1;
@@ -25,7 +25,7 @@ EXPECT1
 my $sActual = `$sProg Martin`;
 $sActual =~ s![\r\n]+!\n!g;
 $sExpect =~ s![\r\n]+!\n!g;
-is($sActual, $sExpect, 'phonetize Martin');
+is($sActual, $sExpect, 'output of `phonetize Martin`');
 
 exit 0;
 

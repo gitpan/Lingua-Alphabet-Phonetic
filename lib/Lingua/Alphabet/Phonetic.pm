@@ -1,5 +1,5 @@
 
-# $Id: Phonetic.pm,v 1.6 2007/04/21 14:30:55 Daddy Exp $
+# $Id: Phonetic.pm,v 1.7 2007/06/04 01:04:59 Daddy Exp $
 
 =head1 NAME
 
@@ -22,9 +22,35 @@ included with this distribution.
 
 =over
 
+=cut
+
+#####################################################################
+
+package Lingua::Alphabet::Phonetic;
+
+use strict;
+
+our
+$VERSION = sprintf("%d.%02d", q$Revision: 1.7 $ =~ /(\d+)\.(\d+)/o);
+
 =item new
 
 Create an object of this class.  See SYNOPSIS above.
+
+=cut
+
+sub new
+  {
+  my $class = shift;
+  my $sAlphabet = shift || '';
+  my $sSubclass = "${class}::$sAlphabet";
+  eval "use $sSubclass";
+  Carp::croak("Unknown phonetic alphabet $sAlphabet: $@") if ($@);
+  my $self = bless {
+                   }, $sSubclass;
+  return $self;
+  } # new
+
 
 =item enunciate
 
@@ -32,6 +58,26 @@ Given a string, returns a list of phonetic alphabet "words", one word
 per character of the original string.  If there is no "word" in the
 alphabet for a character, that character is returned in the list
 position.
+
+=cut
+
+sub enunciate
+  {
+  my $self = shift;
+  my $s = shift || '';
+  my @ac = split('', $s);
+  return map { $self->_name_of_letter($_) } @ac;
+  } # enunciate
+
+
+sub _name_of_letter
+  {
+  # This is the default fallback character --> word mapping.
+  my $self = shift;
+  my $s = shift;
+  # Just return our argument unchanged:
+  return $s;
+  } # _name_of_letter
 
 =back
 
@@ -67,46 +113,6 @@ Please tell the author if you find any!
 Martin Thurn (mthurn@cpan.org).
 
 =cut
-
-#####################################################################
-
-package Lingua::Alphabet::Phonetic;
-
-use strict;
-
-use vars qw( $VERSION );
-$VERSION = sprintf("%d.%02d", q$Revision: 1.6 $ =~ /(\d+)\.(\d+)/o);
-
-sub new
-  {
-  my $class = shift;
-  my $sAlphabet = shift || '';
-  my $sSubclass = "${class}::$sAlphabet";
-  eval "use $sSubclass";
-  Carp::croak("Unknown phonetic alphabet $sAlphabet: $@") if ($@);
-  my $self = bless {
-                   }, $sSubclass;
-  return $self;
-  } # new
-
-
-sub enunciate
-  {
-  my $self = shift;
-  my $s = shift || '';
-  my @ac = split('', $s);
-  return map { $self->_name_of_letter($_) } @ac;
-  } # enunciate
-
-
-sub _name_of_letter
-  {
-  # This is the default fallback character --> word mapping.
-  my $self = shift;
-  my $s = shift;
-  # Just return our argument unchanged:
-  return $s;
-  } # _name_of_letter
 
 1;
 
