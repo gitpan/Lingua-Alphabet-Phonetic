@@ -1,5 +1,5 @@
 
-# $Id: Phonetic.pm,v 1.7 2007/06/04 01:04:59 Daddy Exp $
+# $Id: Phonetic.pm,v 1.8 2008/06/18 01:04:41 Martin Exp $
 
 =head1 NAME
 
@@ -31,7 +31,7 @@ package Lingua::Alphabet::Phonetic;
 use strict;
 
 our
-$VERSION = sprintf("%d.%02d", q$Revision: 1.7 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.8 $ =~ /(\d+)\.(\d+)/o);
 
 =item new
 
@@ -107,6 +107,10 @@ phonetic alphabets from all over the world!
 =head1 BUGS
 
 Please tell the author if you find any!
+
+=head1 LICENSE
+
+This software is released under the same license as Perl itself.
 
 =head1 AUTHOR
 

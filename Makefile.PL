@@ -1,10 +1,10 @@
 
-# $Id: Makefile.PL,v 1.11 2008/03/06 03:59:58 Daddy Exp $
+# $Id: Makefile.PL,v 1.12 2008/06/18 01:02:35 Martin Exp $
 
 use inc::Module::Install;
 
 name('Lingua-Alphabet-Phonetic');
-version(0.056);
+version(0.101);
 
 author('Martin Thurn <mthurn@cpan.org>');
 license('perl');
@@ -25,15 +25,5 @@ test_recommends('Test::Pod::Coverage');
 test_requires('Test::Simple');
 
 WriteAll;
-
-sub MY::postamble
-  {
-  my $ret = <<'PART0';
-phonetize :: Code/phonetize-code.PL
-	$(FULLPERL) phonetize.PL
-	$(FULLPERL) -MExtUtils::Command -e chmod 0755 $@
-
-PART0
-    } # if
 
 __END__

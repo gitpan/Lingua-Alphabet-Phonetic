@@ -1,5 +1,5 @@
 
-# $Id: NATO.pm,v 1.5 2007/06/04 01:04:40 Daddy Exp $
+# $Id: NATO.pm,v 1.6 2008/06/18 01:04:29 Martin Exp $
 
 =head1 NAME
 
@@ -21,6 +21,10 @@ http://en.wikipedia.org/wiki/NATO_phonetic_alphabet
 
 Please tell the author if you find any!
 
+=head1 LICENSE
+
+This software is released under the same license as Perl itself.
+
 =head1 AUTHOR
 
 Martin Thurn (mthurn@cpan.org).
@@ -35,7 +39,7 @@ use strict;
 
 use base 'Lingua::Alphabet::Phonetic';
 our
-$VERSION = sprintf("%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.6 $ =~ /(\d+)\.(\d+)/o);
 
 my @asAlphabet = qw(
 Alpha Bravo Charlie Delta Echo Foxtrot Golf Hotel India Juliet Kilo Lima
