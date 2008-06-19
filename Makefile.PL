@@ -4,7 +4,7 @@
 use inc::Module::Install;
 
 name('Lingua-Alphabet-Phonetic');
-version(0.101);
+version(0.102);
 
 author('Martin Thurn <mthurn@cpan.org>');
 license('perl');

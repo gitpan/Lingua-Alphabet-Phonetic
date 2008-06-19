@@ -1,4 +1,4 @@
-#!perl -w     -*- cperl -*-
+#!perl -w
 
 =head1 NAME
 
@@ -44,7 +44,7 @@ use strict;
 use warnings;
 
 use vars qw( $VERSION );
-$VERSION = do { my @r = (q$Revision: 1.1 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.2 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 my $s = shift() || '';
 # Insert spaces between every letter:
