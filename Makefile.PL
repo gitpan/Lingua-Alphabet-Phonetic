@@ -3,20 +3,15 @@
 
 use inc::Module::Install;
 
-name('Lingua-Alphabet-Phonetic');
-version(0.102);
-
-author('Martin Thurn <mthurn@cpan.org>');
-license('perl');
+all_from('lib/Lingua/Alphabet/Phonetic.pm');
+version(0.103);
 
 install_script('phonetize');
 clean_files('phonetize');
 
 requires( perl => '5.004' );
-
 # File::Basename is only needed for creating the executables:
 build_requires('File::Basename');
-# Test::More is only needed for `make test`:
 test_requires('Test::More');
 test_requires('Test::Pod');
 test_recommends('Test::Pod::Coverage');

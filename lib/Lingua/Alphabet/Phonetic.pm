@@ -1,5 +1,5 @@
 
-# $Id: Phonetic.pm,v 1.8 2008/06/18 01:04:41 Martin Exp $
+# $Id: Phonetic.pm,v 1.9 2008/09/07 03:23:24 Martin Exp $
 
 =head1 NAME
 
@@ -29,9 +29,10 @@ included with this distribution.
 package Lingua::Alphabet::Phonetic;
 
 use strict;
+use warnings;
 
 our
-$VERSION = sprintf("%d.%02d", q$Revision: 1.8 $ =~ /(\d+)\.(\d+)/o);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.9 $ =~ /(\d+)\.(\d+)/o);
 
 =item new
 
